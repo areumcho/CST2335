@@ -1,7 +1,11 @@
 <?xml version="1.0" encoding="utf-8"?>
 <manifest xmlns:android="http://schemas.android.com/apk/res/android"
     package="com.example.areumcho.androidlabs">
-
+    <uses-feature android:name="android.hardware.camera"
+        android:required="true" />
+    <uses-sdk android:minSdkVersion="1"
+        android:targetSdkVersion="1"
+        android:maxSdkVersion="1" />
     <application
         android:allowBackup="true"
         android:icon="@mipmap/ic_launcher"
