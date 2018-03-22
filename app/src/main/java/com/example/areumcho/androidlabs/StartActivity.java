@@ -12,6 +12,7 @@ public class StartActivity extends Activity {
 
     protected static final String ACTIVITY_NAME = "StartActivity";
     private Button button;
+    private Button chatButton;
     private int REQUEST_CODE = 50;
 
     @Override
@@ -22,6 +23,7 @@ public class StartActivity extends Activity {
 
         setContentView(R.layout.activity_start);
         button = (Button) findViewById(R.id.button);
+        chatButton = (Button)findViewById(R.id.chatButton);
         button.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
@@ -30,7 +32,19 @@ public class StartActivity extends Activity {
             }
         });
 
-    }
+        chatButton.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                Log.i(ACTIVITY_NAME, "User clicked Start Chat");
+                Intent intent = new Intent(StartActivity.this, ChatWindow.class);
+                startActivity(intent);
+
+
+            }
+        });
+
+
+    }// end of onCreate
         @Override
         protected void onResume() {
             super.onResume();
