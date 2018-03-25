@@ -12,7 +12,7 @@ public class ChatDatabaseHelper extends SQLiteOpenHelper {
     protected static final String ACTIVITY_NAME = "ChatDatabaseHelper";
 
     static String DATABASE_NAME = "MyDatabase";
-    static int VERSION_NUM = 3;
+    static int VERSION_NUM = 10;
     //public static String TABLE_NAME = "ChatApp";
     final static String KEY_ID = "ID";
     final static String KEY_MESSAGE = "MESSAGE";
@@ -36,7 +36,7 @@ public class ChatDatabaseHelper extends SQLiteOpenHelper {
     public void onUpgrade(SQLiteDatabase db, int oldVersion, int newVersion) {
 
         Log.i("ChatDatabaseHelper", "Calling onUpgrade, oldVersion=" + oldVersion + " newVersion=" + newVersion);
-        db.execSQL(  "DROP TABLE IF EXISTS" + DATABASE_NAME );
+        db.execSQL(  "DROP TABLE IF EXISTS " + DATABASE_NAME ); // always need space after EXISTS " otherwise it concatenates
         onCreate(db);
     }
 

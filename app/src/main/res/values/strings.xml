@@ -12,6 +12,9 @@
     <string name="no">NO</string>
     <string name="chatButton">Start Chat!</string>
     <string name="sendButton">SEND</string>
-
-
+    <string name="weatherButton">weather Button</string>
+    <string name="minTemp">MinTemp</string>
+    <string name="maxTemp">MaxTemp</string>
+    <string name="currentTemp">currentTemp</string>
+    <string name="progressBar">Progress Bar</string>
 </resources>

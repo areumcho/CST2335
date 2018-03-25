@@ -11,6 +11,8 @@
         android:name="android.hardware.camera"
         android:required="true" />
 
+    <uses-permission android:name="android.permission.INTERNET" />
+
     <application
         android:allowBackup="true"
         android:icon="@mipmap/ic_launcher"
@@ -28,7 +30,8 @@
         </activity>
         <activity android:name=".ListItemsActivity" />
         <activity android:name=".ChatWindow" />
-        <activity android:name=".ChatDatabaseHelper"></activity>
+        <activity android:name=".ChatDatabaseHelper" />
+        <activity android:name=".WeatherForecast"></activity>
     </application>
 
 </manifest>
