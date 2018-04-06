@@ -13,6 +13,7 @@ import android.view.ViewGroup;
 import android.widget.ArrayAdapter;
 import android.widget.Button;
 import android.widget.EditText;
+import android.widget.FrameLayout;
 import android.widget.ListView;
 import android.widget.TextView;
 import java.lang.String;
@@ -23,6 +24,8 @@ import java.util.ArrayList;
 public class ChatWindow extends Activity {
 
     protected static final String ACTIVITY_NAME = "ChatWindow";
+
+    //boolean checkFrameLayout;
     ListView chatView;
     EditText chatText;
     Button sendButton;
@@ -40,6 +43,7 @@ public class ChatWindow extends Activity {
         chatView = (ListView) findViewById(R.id.chatView);
         chatText = (EditText) findViewById(R.id.chatText);
         sendButton = (Button) findViewById(R.id.sendButton);
+       // checkFrameLayout = (FrameLayout) findViewById(R.id.chatFrameLayout);
 
 //in this case, “this” is the ChatWindow, which is-A Context object
         chatDatabaseHelper = new ChatDatabaseHelper(this);
@@ -137,6 +141,11 @@ public class ChatWindow extends Activity {
             super(ctx, 0);
         }
 
+
+        public long getItemId(int position) {
+
+            return position;
+        }
 
         public int getCount() {
             return  chatList.size();

@@ -15,6 +15,10 @@
     <string name="weatherButton">weather Button</string>
     <string name="minTemp">MinTemp</string>
     <string name="maxTemp">MaxTemp</string>
+    <string name="windSpeed">WindSpeed</string>
     <string name="currentTemp">currentTemp</string>
     <string name="progressBar">Progress Bar</string>
+    <string name="textFragment1">MessageHere</string>
+    <string name="textFragment2">ID=</string>
+    <string name="buttonFragment">DELETE THIS MESSAGE</string>
 </resources>
