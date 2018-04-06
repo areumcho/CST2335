@@ -43,12 +43,12 @@ public class WeatherForecast extends Activity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_weather_forecast);
 
-        windSpeedTV = (TextView) findViewById(R.id.windSpeed);
         currentTempTV = (TextView) findViewById(R.id.currentTemp);
         maxTempTV = (TextView) findViewById(R.id.maxTemp);
         minTempTV = (TextView) findViewById(R.id.minTemp);
         weatherImg = (ImageView) findViewById(R.id.weatherImage);
         progressBar = (ProgressBar) findViewById(R.id.progressBar);
+        windSpeedTV = (TextView) findViewById(R.id.windSpeed);
 
 
         // progressBar's visibility to View.Visible
@@ -119,13 +119,13 @@ public class WeatherForecast extends Activity {
 
                            publishProgress(50);
                            minTemp = parser.getAttributeValue(null, "min");
-                       }
-                        else if (parser.getName().equals("speed")) {
+
+                       } else if (parser.getName().equals("speed")) {
 
                            publishProgress(75);
-                           windSpeed = parser.getAttributeValue(null, "name");
-                       }
-                        else if (parser.getName().equals("weather")) {
+                           windSpeed = parser.getAttributeValue(null, "value");
+
+                       } else if (parser.getName().equals("weather")) {
 
                            currentWeather = parser.getAttributeValue(null, "icon");
                        }
@@ -133,7 +133,7 @@ public class WeatherForecast extends Activity {
                    }
                } // end of while
 
-           conn.disconnect();g
+           conn.disconnect();
 
                 //looking for a weather image and if it exists
                 if (fileExistance(currentWeather + ".png")) {
@@ -191,11 +191,13 @@ public class WeatherForecast extends Activity {
             currentTempTV.setText("Current temperature is " + currentTemp + "celcius ");
             maxTempTV.setText("Max temperature is " + maxTemp + "celcius ");
             minTempTV.setText("Min temperature is " + minTemp + "celcius ");
-            windSpeedTV.setText("Wind speed is " + windSpeed );
+            windSpeedTV.setText("Wind speed is " + windSpeed);
             weatherImg.setImageBitmap(bitmap);
             progressBar.setVisibility(View.INVISIBLE);
 
         }
+
+
 
 
         @Override
