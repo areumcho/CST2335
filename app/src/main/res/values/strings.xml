@@ -17,4 +17,7 @@
     <string name="maxTemp">MaxTemp</string>
     <string name="currentTemp">currentTemp</string>
     <string name="progressBar">Progress Bar</string>
+    <string name="messageText">MESSAGE HERE</string>
+    <string name="messageIDText">ID = </string>
+    <string name="deleteButtonString">DELETE THIS MESSAGE</string>
 </resources>
